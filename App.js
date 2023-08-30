@@ -3,6 +3,7 @@ import React, { useState, useEffect, Fragment } from "react";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import { func } from "./src/constants";
+import { PaperProvider } from "react-native-paper";
 
 // root stack navigatio
 import RootStack from "./src/navigation/RootStack";
@@ -46,8 +47,10 @@ export default function App() {
 
   return (
     <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <RootStack />
+      <PaperProvider>
+        <StatusBar barStyle="dark-content" />
+        <RootStack />
+      </PaperProvider>
     </Fragment>
   );
 }

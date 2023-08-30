@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import DrawerStack from "./DrawerStack";
 
 // screens
+import Login from "../screens/auth/Login";
 import ModalHelp from "../screens/ModalHelp";
 import ModalQRCode from "../screens/ModalQRCode";
 import ModalTutorialBike from "../screens/ModalTutorialBike";
@@ -19,6 +20,13 @@ export default () => (
         presentation: "fullScreenModal",
       }}
     >
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Stack.Screen
         name="DrawerStack"
         component={DrawerStack}
